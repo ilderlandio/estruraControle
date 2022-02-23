@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Estruras de Repetição </title>
+</head>
+<body>
+
+  <script>
+  	// Array de objetos
+  	   const usuarios = [
+		    {nome: "Robinson", idade: 18},
+		    {nome: "William", idade: 28},
+		    {nome: "Janaina", idade: 19},
+		    {nome: "Carla", idade: 25},
+		    {nome: "Maíra", idade: 32},
+     ];
+
+     const quantidadeDeUsuarios = usuarios.length;
+
+for (let i = 0; i < quantidadeDeUsuarios; i++) {
+	console.log(usuarios[i].nome+' - '+usuarios[i].idade);
+	}
+
+	// com o FOR IN
+	/* sintaxe:
+	for(let variavel in objeto) {
+	     faça...
+	} 
+	*/
+	/* 
+     Não precisamos inicializar um identificador para controlar o fluxo de repetição. A própria linguagem se encarrega de saber quantos itens existem dentro do objeto a ser iterado e, com base nisso, repete até que essa lista de itens seja toda percorrida.
+	 */
+
+	 const pessoas = [
+		    {nome: "Robinson", idade: 18},
+		    {nome: "William", idade: 28},
+		    {nome: "Janaina", idade: 19},
+		    {nome: "Carla", idade: 25},
+		    {nome: "Maíra", idade: 32},
+     ];
+
+	for (let item in pessoas) { // índice é obtido automaticamente
+		console.log(pessoas[item].nome+ ' - '+pessoas[item].idade);
+		
+	}
+
+	// Percorrer objetos com FOR IN
+
+	const pessoa = {
+		nome:"Maria",
+		idade:20,
+		peso:65,
+		altura:1.7
+	}
+
+	for(let atributo in pessoa){
+		console.log(`${atributo} = ${pessoa[atributo]}`);
+	}
+
+	/* com FOR OF - O Mais moderno FOR do JS
+	Sintaxe: 
+	    for (let variavel of objeto) {
+	      faça
+        }
+	 */
+	 const info = [
+		    {nome: "Robinson", idade: 18},
+		    {nome: "William", idade: 28},
+		    {nome: "Janaina", idade: 19},
+		    {nome: "Carla", idade: 25},
+		    {nome: "Maíra", idade: 32},
+     ];
+
+     for(let dado of info){
+     	console.log(dado.nome+' - '+dado.idade); // não preciso citar o nome do array
+     }
+
+     
+
+
+  </script>
+</body>
+</html>

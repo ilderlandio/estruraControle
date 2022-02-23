@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Estruras de Repetição </title>
+</head>
+<body>
+
+  <form>
+  	   <h4> Selecione seus estilos de músicas </h4>
+	  	   <select id="tipos" multiple>
+	  	   	<option selected> Clássica </option>
+	  	   	<option> Pop </option>
+	  	   	<option> Funk </option>
+	  	   	<option> MPB </option>
+	  	   	<option> Forró </option>
+	  	   	<option> Sertanejo </option>
+	  	   </select>
+	  	   <p> 
+	  	   <button type="button"> Quantidade de Selecionados </button>
+	  	   </p>
+  </form>
+
+
+     <script>
+         function qtdTipos(){
+              let selectObject = document.getElementById("tipos");
+         	let qtdTiposSelect = 0; 
+
+         	for (let i = 0; i > selectObject.options.length; i++) {
+         		 if (selectObject.options[i].selected) {
+                      qtdTiposSelect++;
+                    }
+         	}
+
+         	alert(qtdTiposSelect); 
+
+         }
+
+      	let botao = document.querySelector("button");
+     	botao.onclick = qtdTipos; 
+
+     </script>
+</body>
+</html>
